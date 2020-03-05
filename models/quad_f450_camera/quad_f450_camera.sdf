@@ -37,14 +37,14 @@
       <visual name='base_link_visual'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
-          <mesh>
+          <mesh> 
             <scale>1 1 1</scale>
             <uri>model://quad_f450_camera/meshes/base_link.STL</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Red</name>
+            <name>Gazebo/DarkGrey</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>
@@ -54,7 +54,7 @@
    </link>
 
    <!-- IMU link-->
-   <link name='/imu_link'>
+   <link name='/imu_link'> 
       <pose>0 0 0 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
@@ -130,7 +130,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Yellow</name>
+            <name>Gazebo/BlueTransparent</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>
@@ -199,7 +199,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Yellow</name>
+            <name>Gazebo/BlueTransparent</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>
@@ -268,7 +268,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Yellow</name>
+            <name>Gazebo/BlueTransparent</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>
@@ -337,7 +337,7 @@
         </geometry>
         <material>
           <script>
-            <name>Gazebo/Yellow</name>
+            <name>Gazebo/BlueTransparent</name>
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>
@@ -418,10 +418,10 @@
             <uri>file://media/materials/scripts/gazebo.material</uri>
           </script>
         </material>
-        <gravity>1</gravity>
-        <velocity_decay/>
-        <self_collide>0</self_collide>
       </visual>
+	  <gravity>1</gravity>
+	  <velocity_decay/>
+      <self_collide>0</self_collide>
       <sensor name="camera_imu" type="imu">
         <always_on>1</always_on>
       </sensor>
