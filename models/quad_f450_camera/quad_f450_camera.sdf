@@ -5,14 +5,14 @@
       <pose>0 0 0 0 0 0</pose> <!-- This pose is the visual offset of the vehicle + the reference frame -->
       <inertial>
         <pose>0.0001429 -0.00085582 0.01685 0 0 0</pose> <!-- This pose is the center of mass of the vehicle-->
-        <mass>1.2716</mass>
+        <mass>1.65</mass>
         <inertia>
-          <ixx>0.00087678</ixx>
-          <ixy>-6.7834e-08</ixy>
-          <ixz>-5.7185e-07</ixz>
-          <iyy>0.0016004</iyy>
-          <iyz>1.7801e-07</iyz>
-          <izz>0.0022427</izz>
+          <ixx>0.014959</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.022005</iyy>
+          <iyz>0</iyz>
+          <izz>0.028033</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -368,7 +368,6 @@
     <link name="camera_link">
     <pose>0 0 -0.013633 0 1.5708 1.5708 0</pose>
       <inertial>
-        <!-- place holder -->
         <pose>0 0 0 0 0 0</pose>
         <mass>0.050075</mass>
         <inertia>
@@ -489,7 +488,6 @@
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <motorSpeedPubTopic>/motor_speed/0</motorSpeedPubTopic>
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
-      <!--
       <joint_control_pid>
         <p>0.1</p>
         <i>0</i>
@@ -499,7 +497,6 @@
         <cmdMax>3</cmdMax>
         <cmdMin>-3</cmdMin>
       </joint_control_pid>
-      -->
     </plugin>
 
     <!-- Motor 4 Plugin-->
@@ -519,7 +516,6 @@
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <motorSpeedPubTopic>/motor_speed/1</motorSpeedPubTopic>
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
-      <!--
       <joint_control_pid>
         <p>0.1</p>
         <i>0</i>
@@ -529,7 +525,6 @@
         <cmdMax>3</cmdMax>
         <cmdMin>-3</cmdMin>
       </joint_control_pid>
-      -->
     </plugin>
 
     <!-- Motor 1 Plugin-->
@@ -549,7 +544,6 @@
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <motorSpeedPubTopic>/motor_speed/2</motorSpeedPubTopic>
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
-      <!--
       <joint_control_pid>
         <p>0.1</p>
         <i>0</i>
@@ -559,7 +553,6 @@
         <cmdMax>3</cmdMax>
         <cmdMin>-3</cmdMin>
       </joint_control_pid>
-      -->
     </plugin>
 
     <!-- Motor 3 Plugin-->
@@ -579,7 +572,6 @@
       <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
       <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
       <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
-      <!--
       <joint_control_pid>
         <p>0.1</p>
         <i>0</i>
@@ -589,7 +581,6 @@
         <cmdMax>3</cmdMax>
         <cmdMin>-3</cmdMin>
       </joint_control_pid>
-      -->
     </plugin>
 
     <!-- GPS Plugin-->
