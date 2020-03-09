@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="FlameWheel_F450_block">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="6.3557E-19 -2.7105E-20 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.44E-05" />
+      <inertia
+        ixx="1.3872E-11"
+        ixy="-4.7222E-28"
+        ixz="-2.4678E-43"
+        iyy="1.3872E-11"
+        iyz="-3.9464E-44"
+        izz="2.16E-11" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="chasis_link">
+    <inertial>
+      <origin
+        xyz="-1.6049E-05 0.00031379 0.012018"
+        rpy="0 0 0" />
+      <mass
+        value="0.44728" />
+      <inertia
+        ixx="0.0007822"
+        ixy="1.2698E-11"
+        ixz="1.1558E-14"
+        iyy="0.00098484"
+        iyz="1.1391E-07"
+        izz="0.0015565" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/chasis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/chasis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_chasis"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0008"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="chasis_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="propeller_1_link">
+    <inertial>
+      <origin
+        xyz="3.5799E-07 3.6139E-07 -0.00082037"
+        rpy="0 0 0" />
+      <mass
+        value="0.00082772" />
+      <inertia
+        ixx="3.593E-07"
+        ixy="-3.6419E-07"
+        ixz="2.9799E-13"
+        iyy="3.8272E-07"
+        iyz="2.4963E-13"
+        izz="7.3988E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/propeller_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1098 0.1098 0.1098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/propeller_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_propeller_1"
+    type="revolute">
+    <origin
+      xyz="0.15891 0.15872 0.062676"
+      rpy="0 0 0.7854" />
+    <parent
+      link="chasis_link" />
+    <child
+      link="propeller_1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="propeller_2_link">
+    <inertial>
+      <origin
+        xyz="-3.63379773493655E-07 3.64833703747625E-07 -0.000820365008767927"
+        rpy="0 0 0" />
+      <mass
+        value="0.000827721182106375" />
+      <inertia
+        ixx="3.82722732347651E-07"
+        ixy="3.64185600568519E-07"
+        ixz="-2.37806595900958E-13"
+        iyy="3.59296256863344E-07"
+        iyz="2.68848157881329E-13"
+        izz="7.39882465410675E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/propeller_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/propeller_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_propeller_2"
+    type="revolute">
+    <origin
+      xyz="0.1589 -0.15909 0.062676"
+      rpy="0 0 -0.7854" />
+    <parent
+      link="chasis_link" />
+    <child
+      link="propeller_2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="propeller_3_link">
+    <inertial>
+      <origin
+        xyz="3.59348555689643E-07 3.87399358259266E-07 -0.000820367506119246"
+        rpy="0 0 0" />
+      <mass
+        value="0.000827722589736431" />
+      <inertia
+        ixx="3.59296291041373E-07"
+        ixy="-3.64185676834099E-07"
+        ixz="2.96727292541656E-13"
+        iyy="3.82722801283459E-07"
+        iyz="2.70904960417478E-13"
+        izz="7.39882553724865E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/propeller_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/propeller_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_propeller_3"
+    type="revolute">
+    <origin
+      xyz="-0.15891 -0.15908 0.062676"
+      rpy="0 0 0.7854" />
+    <parent
+      link="chasis_link" />
+    <child
+      link="propeller_3_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="propeller_4_link">
+    <inertial>
+      <origin
+        xyz="-3.69099850516807E-07 3.563222837899E-07 -0.000820368385214279"
+        rpy="0 0 0" />
+      <mass
+        value="0.000827722463176095" />
+      <inertia
+        ixx="3.82722692178188E-07"
+        ixy="3.6418565735908E-07"
+        ixz="-2.4900304347919E-13"
+        iyy="3.59296408726141E-07"
+        iyz="2.7923777957287E-13"
+        izz="7.39882566322064E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/propeller_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_block/meshes/propeller_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_propeller_4"
+    type="revolute">
+    <origin
+      xyz="-0.1589 0.15873 0.062676"
+      rpy="0 0 -0.7854" />
+    <parent
+      link="chasis_link" />
+    <child
+      link="propeller_4_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
