@@ -431,7 +431,7 @@
           <image>
             <format>R8G8B8</format>
             <width>640</width>
-            <height>360</height>
+            <height>480</height>
           </image>
           <clip>
             <near>0.05</near>
@@ -442,17 +442,30 @@
         <update_rate>10</update_rate>
         <visualize>true</visualize>
 
+        <plugin filename="libgazebo_ros_camera.so" name="camera_en_ros">
+            <robotNamespace>quad_f450_camera</robotNamespace>
+            <cameraName>camera_link</cameraName>
+            <imageTopicName>raw_image</imageTopicName>
+            <cameraInfoTopicName>info_image</cameraInfoTopicName>
+            <FrameName>cameraImage</FrameName>
+            <Cy>0</Cy>
+            <Cx>0</Cx>
+            <updateRate>30.0</updateRate>
+        </plugin>
+
         <plugin name="GstCameraPlugin" filename="libgazebo_gst_camera_plugin.so">
             <robotNamespace></robotNamespace>
             <udpPort>5600</udpPort>
-        </plugin> 
+        </plugin>
+
         <plugin name="GeotaggedImagesPlugin" filename="libgazebo_geotagged_images_plugin.so">
-            <robotNamespace>typhoon_h480</robotNamespace>
+            <robotNamespace>quad_f450_camera</robotNamespace>
             <interval>1</interval>
             <width>3840</width>
             <height>2160</height>
             <maximum_zoom>8.0</maximum_zoom>
         </plugin> 
+
       </sensor> 
     </link>
     <joint name='camera_joint' type='fixed'>
