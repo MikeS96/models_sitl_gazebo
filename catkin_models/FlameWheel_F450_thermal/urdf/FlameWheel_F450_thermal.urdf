@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="FlameWheel_F450_thermal">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00027849 -0.00083549 0.015434"
+        rpy="0 0 0" />
+      <mass
+        value="1.3025" />
+      <inertia
+        ixx="0.00090168"
+        ixy="-6.8172E-08"
+        ixz="4.082E-06"
+        iyy="0.0016238"
+        iyz="1.7902E-07"
+        izz="0.0022513" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="propeller_1">
+    <inertial>
+      <origin
+        xyz="3.9364E-07 4.9255E-07 -0.00082037"
+        rpy="0 0 0" />
+      <mass
+        value="0.0016559" />
+      <inertia
+        ixx="8.4464E-07"
+        ixy="-7.2191E-07"
+        ixz="5.3515E-13"
+        iyy="6.4014E-07"
+        iyz="5.5137E-13"
+        izz="1.4805E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/propeller_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/propeller_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_propeller_1"
+    type="revolute">
+    <origin
+      xyz="0.15891 0.15872 0.062676"
+      rpy="0 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="propeller_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="propeller_2">
+    <inertial>
+      <origin
+        xyz="-4.0868E-07 4.4208E-07 -0.00082036"
+        rpy="0 0 0" />
+      <mass
+        value="0.001655" />
+      <inertia
+        ixx="8.5496E-07"
+        ixy="7.1953E-07"
+        ixz="-4.1012E-13"
+        iyy="6.2836E-07"
+        iyz="5.491E-13"
+        izz="1.479E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/propeller_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/propeller_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_propeller_2"
+    type="revolute">
+    <origin
+      xyz="0.1589 -0.15909 0.062676"
+      rpy="0 0 -0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="propeller_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="propeller_3">
+    <inertial>
+      <origin
+        xyz="3.7075E-07 4.7328E-07 -0.00082037"
+        rpy="0 0 0" />
+      <mass
+        value="0.0016559" />
+      <inertia
+        ixx="8.4464E-07"
+        ixy="-7.2191E-07"
+        ixz="4.4271E-13"
+        iyy="6.4014E-07"
+        iyz="4.7478E-13"
+        izz="1.4805E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/propeller_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/propeller_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_propeller_3"
+    type="revolute">
+    <origin
+      xyz="-0.15891 -0.15908 0.062676"
+      rpy="0 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="propeller_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="propeller_4">
+    <inertial>
+      <origin
+        xyz="-4.1378E-07 4.3157E-07 -0.00082036"
+        rpy="0 0 0" />
+      <mass
+        value="0.001655" />
+      <inertia
+        ixx="8.5496E-07"
+        ixy="7.1953E-07"
+        ixz="-4.184E-13"
+        iyy="6.2836E-07"
+        iyz="5.3609E-13"
+        izz="1.479E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/propeller_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/propeller_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_propeller_4"
+    type="revolute">
+    <origin
+      xyz="-0.1589 0.15873 0.062676"
+      rpy="0 0 -0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="propeller_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cam1_link">
+    <inertial>
+      <origin
+        xyz="-0.00083432 -0.0028971 -0.00024839"
+        rpy="0 0 0" />
+      <mass
+        value="0.050075" />
+      <inertia
+        ixx="3.2061E-05"
+        ixy="4.2601E-10"
+        ixz="-1.169E-08"
+        iyy="5.1652E-06"
+        iyz="-5.2181E-10"
+        izz="3.0815E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/cam1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/cam1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_cam1"
+    type="fixed">
+    <origin
+      xyz="0.041421 -0.046913 -0.067515"
+      rpy="0.0068235 0.7854 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cam1_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="cam2_link">
+    <inertial>
+      <origin
+        xyz="-0.00083432 1.1608E-05 -2.3578E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.050075" />
+      <inertia
+        ixx="3.2061E-05"
+        ixy="4.2601E-10"
+        ixz="-1.169E-08"
+        iyy="5.1652E-06"
+        iyz="-5.2183E-10"
+        izz="3.0815E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/cam1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://FlameWheel_F450_thermal/meshes/cam1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_cam2"
+    type="fixed">
+    <origin
+      xyz="0.042355 0.046075 -0.066582"
+      rpy="0.020785 0.7854 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cam2_link" />
+    <axis
+      xyz="0 0.020784 0.99978" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
